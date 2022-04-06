@@ -7,15 +7,13 @@
 /**
  * This function gets the users input and calculates the area of a trapezoid
  */
-function calculateClicked() {
+function convertClicked() {
   //input
-  const aBase = parseInt(document.getElementById("a-base").value)
-  const bBase = parseInt(document.getElementById("b-base").value)
-  const height = parseInt(document.getElementById("height").value)
+  const fahrenheit = parseInt(document.getElementById("fahrenheit").value)
 
   //process
-  const area = ((aBase + bBase) / 2) * height
+  const celsius = (fahrenheit - 32) * 5/9
   
   //output
-  document.getElementById("area-of-trapezoid").innerHTML = "<p>The area of the trapezoid is: " +  area + " mm²!</p>"
+  document.getElementById("temperature-in-celsius").innerHTML = "The temperature is: " +  celsius.toFixed(2) + " °C!"
 }
